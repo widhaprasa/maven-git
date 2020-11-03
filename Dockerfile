@@ -1,5 +1,6 @@
 FROM maven:3-alpine
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y git
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache git && \
+    apk add --no-cache nss
